@@ -7,14 +7,13 @@ Built with Python and PySide6 as a personal portfolio project.
 
 ## Screenshots
 
-<!-- Add screenshots to a /screenshots folder and replace these placeholders -->
 | Dashboard | Scanner |
 |---|---|
-| _screenshot coming soon_ | _screenshot coming soon_ |
+| ![Dashboard](screenshots/dashboard.png) | ![Scanner](screenshots/scanner.png) |
 
 | Charts | News |
 |---|---|
-| _screenshot coming soon_ | _screenshot coming soon_ |
+| ![Charts](screenshots/charts.png) | ![News](screenshots/news.png) |
 
 ## What it does
 
@@ -70,7 +69,7 @@ breadth, top signals from your last scan, latest headlines, sector mix and scan 
 ## Run from source
 
 ```bash
-git clone https://github.com/your-username/cortex.git
+git clone https://github.com/aarav-kushwaha/Cortex.git
 cd cortex
 python -m venv .venv
 .venv\Scripts\activate        # Windows (Linux/macOS: source .venv/bin/activate)
@@ -151,14 +150,14 @@ counts reasonable — the data providers may rate-limit you.
    git status          # should list ~15 files; no .aether_cache, no dist, no .venv
    git commit -m "Initial release"
    git branch -M main
-   git remote add origin https://github.com/<username>/cortex.git
+   git remote add origin https://github.com/aarav-kushwaha/Cortex.git
    git push -u origin main
    ```
 4. **Attach the Windows EXE as a release asset** (so the repo stays small):
    - Double-click `BUILD_EXE.bat` on your laptop; it writes `dist\Cortex\Cortex.exe`.
    - Zip the whole `dist\Cortex\` folder → `Cortex-Windows.zip`.
    - On GitHub → **Releases → Draft a new release** → tag `v2.1` → upload the zip.
-5. Replace `your-username` in `README.md` and in the `USER_AGENT` line of `scanner.py` with your real GitHub username, then commit and push again.
+5. The `README.md` clone URL already points to `aarav-kushwaha/Cortex`.
 6. Never commit a real API key. `.env` files are already git-ignored.
 
 ## License
