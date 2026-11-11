@@ -128,38 +128,6 @@ without touching source code or your saved watchlist.
 | `scanner.py` | Data engine: downloads, indicators, scan loop, news |
 | `app.py` | The original interface |
 
-## Data and fair use
-
-Cortex ships no market data. It fetches from public sources at runtime on your machine
-(Yahoo Finance via `yfinance`, exchange symbol lists from NSE, BSE and Nasdaq Trader,
-Yahoo and Google News RSS) and caches locally in `.aether_cache/`, which is git-ignored.
-You are responsible for following each provider's terms of use. Keep scan sizes and worker
-counts reasonable — the data providers may rate-limit you.
-
-## Publishing on GitHub
-
-1. On github.com → **New repository** → name it `cortex` → **Public** → leave README/.gitignore/license **unticked** → **Create**.
-2. In GitHub **Settings → Emails**, tick "Keep my email addresses private" and copy your `<id>+<username>@users.noreply.github.com` address.
-3. Open a terminal inside the `cortex-release` folder and run:
-
-   ```
-   git init
-   git config user.name "Your Name"
-   git config user.email "<id>+<username>@users.noreply.github.com"
-   git add .
-   git status          # should list ~15 files; no .aether_cache, no dist, no .venv
-   git commit -m "Initial release"
-   git branch -M main
-   git remote add origin https://github.com/aarav-kushwaha/Cortex.git
-   git push -u origin main
-   ```
-4. **Attach the Windows EXE as a release asset** (so the repo stays small):
-   - Double-click `BUILD_EXE.bat` on your laptop; it writes `dist\Cortex\Cortex.exe`.
-   - Zip the whole `dist\Cortex\` folder → `Cortex-Windows.zip`.
-   - On GitHub → **Releases → Draft a new release** → tag `v2.1` → upload the zip.
-5. The `README.md` clone URL already points to `aarav-kushwaha/Cortex`.
-6. Never commit a real API key. `.env` files are already git-ignored.
-
 ## License
 
 [MIT](LICENSE)
