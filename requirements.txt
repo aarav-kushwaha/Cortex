@@ -1,0 +1,13 @@
+# Core dependencies for Cortex (Python 3.10+)
+yfinance>=0.2.40
+pandas>=2.2.0
+numpy>=1.26.0
+plotly>=5.24.0          # only used by the original app.py interface
+PySide6>=6.7.0
+matplotlib>=3.8.0        # only used by the original app.py interface
+requests>=2.32.0
+rapidfuzz>=3.9.0
+finnhub-python>=2.4.0
+
+# Only needed to build the Windows EXE (BUILD_EXE.bat):
+# pyinstaller>=6.0
